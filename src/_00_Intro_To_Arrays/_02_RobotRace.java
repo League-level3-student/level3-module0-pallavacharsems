@@ -9,11 +9,40 @@ import org.jointheleague.graphical.robot.Robot;
 public class _02_RobotRace {
     // 1. make a main method
 public static void main(String[] args) {
-	Robot rob[] = new Robot[5];
-	for (int i = 0; i < rob.length; i++) {
-		rob[i] = new Robot();
-		rob[i].setY(550);
+	int num = 0;
+	Random s = new Random();
+	num = s.nextInt(50);
+	Robot[] ice = new Robot[5]; 
+for (int i = 0; i < ice.length; i++) {
+	ice[i] = new Robot();
+	ice[i].setX(50);
+	ice[i].setY(300);
+	ice[i].setSpeed(100);
+}
+
+boolean winner = false;
+while(winner == false) {
+for (int i = 0; i < ice.length; i++) {
+	num = s.nextInt(50);
+	for (int j = 0; j <num; j++) {
+		
+	ice[i].move(1);
+	ice[i].turn(1);
+	
+	if(ice[i].getX() == 50 && ice[i].getY() == 300) {
+		JOptionPane.showMessageDialog(null, "Robot " + i + " won the race!!!");
+		JOptionPane.showMessageDialog(null, "Robot " + i + " is throwing a party at his house. Everyone come!!!");
+		winner = true;
+		break;
 	}
+	}
+	
+	
+}
+}
+
+}
+	
 }
         // 2. create an array of 5 robots.
 
@@ -33,4 +62,4 @@ public static void main(String[] args) {
     
         // 9. make the robots race around a circular track.
 
-}
+
