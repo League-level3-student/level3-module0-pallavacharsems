@@ -1,5 +1,6 @@
 package _01_Simple_Array_Algorithms;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MoreArrayFun {
@@ -7,8 +8,11 @@ public class MoreArrayFun {
 public static void main(String[] args) {
 	String[] names = { "Bob", "Jeff", "Josh", "Noah", "Jack" };
 	printArray(names);
+	 System.out.println("");
 	printReverseArray(names);
+	 System.out.println("");
 	printOtherArray(names);
+	 System.out.println("");
 	printRandomArray(names);
 	
 }
@@ -18,9 +22,11 @@ public static void main(String[] args) {
 void printArray(String [] names) {
 	for (int i = 0; i < names.length; i++) {
 		System.out.println(names[i]);
+		
 	}
+	
 }
-
+    
 
     //3. Write a method that takes an array of Strings and prints all the Strings in the array
     //   in reverse order.
@@ -45,14 +51,23 @@ void printArray(String [] names) {
     //5. Write a method that takes an array of Strings and prints all the Strings in the array
     //   in a completely random order. Almost every run of the program should result in a different order.
 static void printRandomArray(String [] names) {
+	ArrayList<String> nameslist = new ArrayList<String>();
+	for (int i = 0; i < names.length; i++) {
+		nameslist.add(names[i]);
+	}
 	int num = 0;
 	Random rand = new Random();
-	num = rand.nextInt(names.length-1);
-	for (int i = 0; i < num; i++) {
-		System.out.println(names[i]);
+	
+	
+	for (int i = 0; i < names.length; i++) {
+		num = rand.nextInt(nameslist.size());
+		System.out.println(nameslist.get(num));
+		nameslist.remove(num);
+	}
+		
 		
 	}
 	
 }
 
-}
+

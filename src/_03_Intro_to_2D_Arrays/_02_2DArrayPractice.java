@@ -31,8 +31,8 @@ public class _02_2DArrayPractice {
      *          6, 7, 8
      */
     public Integer[][] test1() {
-        
-        return null;
+        Integer [][] array2 = new Integer [3][3];
+        return array2;
     }
     
     /*
@@ -41,8 +41,8 @@ public class _02_2DArrayPractice {
      *          "e", "f", "g", "e"
      */
     public String[][] test2() {
-        
-        return null;
+        String [][] string = new String[2][4];
+        return string;
     }
     
     /*
@@ -54,8 +54,8 @@ public class _02_2DArrayPractice {
      *          true, false
      */
     public Boolean[][] test3() {
-        
-        return null;
+   
+        return new Boolean[5][2];
     }
     
     /*
@@ -87,7 +87,7 @@ public class _02_2DArrayPractice {
     public Object test4() {
         Object[][] objects = { {null, null, null, null}, {null, null, null, new Object()} };
         
-        return null;
+        return objects[1][3];
     }
     
     /* Given the array of Objects below, return the element that is not null
@@ -97,7 +97,7 @@ public class _02_2DArrayPractice {
     public Object test5() {
         Object[][] objects = { {null, null, new Object(), null}, {null, null, null, null} };
         
-        return null;
+        return objects[0][2];
     }
     
     /*
@@ -106,8 +106,14 @@ public class _02_2DArrayPractice {
      */
     public Integer test6() {
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
+        Integer sum = 0;
+        for (int i = 0; i < nums[0].length; i++) {
+        	
+        	sum+=nums[0][i];
+		}
         
-        return null;
+        		
+        return sum;
     }
     
     /*
@@ -116,8 +122,11 @@ public class _02_2DArrayPractice {
      */
     public Integer test7() {
         int[][] nums = { {8, 7, 6, 5}, {4, 3}, {2, 1, 0} };
-        
-        return null;
+        Integer sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+        	sum+=nums[i][0];
+		}
+        return sum;
     }
     
     /*
@@ -125,8 +134,11 @@ public class _02_2DArrayPractice {
      * specified row
      */
     public Integer getSumByRow(int[][] matrix, int row) {
-        
-        return null;
+        Integer sum = 0;
+        for (int i = 0; i < matrix[row].length; i++) {
+        	sum+=matrix[row][i];
+		}	
+        return sum;
     }
     
     /*

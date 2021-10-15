@@ -6,7 +6,7 @@ public class _00_2DArrayDemo {
          * The syntax for a two dimensional array is two square brackets [][]
          * int[][] array2D = { {1, 2, 3},
          *                     {4, 5, 6},
-         *                     {7, 8, 9,} };
+         *                     {7, 8, 9} };
          *
          * array2D[0] is the array {1, 2, 3}
          * array2D[1] is the array {4, 5, 6}
