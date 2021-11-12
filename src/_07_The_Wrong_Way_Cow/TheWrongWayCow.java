@@ -48,12 +48,38 @@
 
 package _07_The_Wrong_Way_Cow;
 
+import javax.swing.JOptionPane;
+
 public class TheWrongWayCow {
 
-    public static int[] findWrongWayCow(final char[][] field) {
-        // Fill in the code to return the [col, row] coordinate position of the
-        // head (letter 'c') of the wrong way cow!
-        
-        return null;
-    }
+	public static int[] findWrongWayCow(final char[][] field) {
+		// Fill in the code to return the [col, row] coordinate position of the
+		// head (letter 'c') of the wrong way cow!
+		for (int i = 0; i < field.length; i++) {
+			for (int j = 0; j < field[i].length; j++) {
+				if (field[i][j] == 'c') {
+					if (i < field.length - 1 && field[i + 1][j] == 'o') {
+						if (i < field.length - 2 && field[i + 2][j] == 'w') {
+							int[] coords = { j, i };
+							return coords;
+						}
+					}
+					if (i > 0 && field[i - 1][j] == 'o') {
+						if (i > 1 && field[i - 2][j] == 'w') {
+							int[] coords = { j, i };
+							return coords;
+						}
+					}
+					if (j > 0 && field[i][j - 1] == 'o') {
+						if (j > 1 && field[i][j - 2] == 'w') {
+							int[] coords = { j, i };
+							return coords;
+						}
+					}
+				}
+			}
+		}
+
+		return null;
+	}
 }
