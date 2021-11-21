@@ -72,7 +72,7 @@ public class TheWrongWayCowTest {
       "....w.o....".toCharArray(),
       "......w.cow".toCharArray()
       };
-    assertArrayEquals(new int[]{8,4}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{8,4}, TheWrongWayCow.findWrongWayCow(field));
   }
 
   @Test
